@@ -66,3 +66,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Installed package:
+
+1. npm install --save bootstrap@4.0.0 jquery popper.js
+2. npm install --save node-sass-chokidar npm-run-all
