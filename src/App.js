@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import * as redux from "redux";
 import { Provider } from "react-redux";
 import {} from "redux-thunk";
 

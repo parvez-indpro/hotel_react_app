@@ -5,8 +5,6 @@ class RentalList extends Component {
   renderRentals = () => {
     console.log("RentalList class this.props::", this.props);
     return this.props.rentals.map((rental, index) => {
-      // debugger;
-      console.log("RentalList class this.props.rentals::", rental);
       return (
         <RentalCard colNum="col-md-3 col-xs-6" rental={rental} key={index} />
       );
