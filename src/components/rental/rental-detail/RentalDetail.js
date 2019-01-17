@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "actions";
+import RentalDetailInfo from "./RentalDetailInfo";
+import RentalMap from "./RentalMap";
 
 class RentalDetail extends Component {
   componentWillMount() {
@@ -11,14 +13,21 @@ class RentalDetail extends Component {
   render() {
     console.log("Rental Details ID::", this.props.match.params.id);
     const rental = this.props.rental;
-    if (rental.id) {
+    if (rental._id) {
       return (
-        <div>
-          <h1>{rental.title}</h1>
-          <h1>{rental.city}</h1>
-          <h1>{rental.description}</h1>
-          <h1>{rental.dailyRate}$</h1>
-        </div>
+        <section id="rentalDetails">
+          <div className="upper-section">
+            <div className="row">
+              <div className="col-md-6">
+                <img src={rental.image} alt="" />
+              </div>
+              <div className="col-md-6">
+                <RentalMap location={`${rental.city}, ${rental.street}`} />
+              </div>
+            </div>
+          </div>
+          <RentalDetailInfo rental={rental} />
+        </section>
       );
     } else {
       return <h1>Loading...</h1>;
